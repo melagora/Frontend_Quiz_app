@@ -1,0 +1,92 @@
+/* style.css */
+
+/* Estilos generales */
+body {
+  background-color: #313e51;
+  color: white;
+  height: 100vh; /* Set body height to 100% viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para la sección de títulos */
+.titulo {
+  /* background-color: aqua; */
+  text-align: left;
+  margin-left: 100px;
+}
+
+.titulo p {
+  line-height: 0;
+}
+
+.welcomeTittle {
+  font-size: 55px;
+  font-weight: 100;
+  padding-top: 20px;
+}
+
+.nameTittle {
+  font-size: 52px;
+  font-weight: bolder;
+  padding-top: 35px;
+}
+
+.nameSubtittle {
+  padding-top: 45px;
+}
+
+.temas {
+  /* background-color: rgb(0, 41, 41); */
+  padding-left: 125px;
+}
+
+.temas .col {
+  /* Estilos para las columnas de temas */
+  width: 300px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #3c4d66;
+  font-weight: bolder;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.477);
+
+  display: flex; /* Add flexbox layout */
+  align-items: center; /* Vertically center text */
+  justify-content: left; /* Horizontally center text (if needed) */
+}
+.temas .col:hover{
+  transform: scale(1.05);
+  
+}
+
+.divimg {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imag1{
+  background-image: url(/Frontend_Quiz_app/images/icons8-html-48.png);
+  background-color: rgba(255, 123, 0, 0.2);
+}
+
+.imag2{
+  background-image: url(/Frontend_Quiz_app/images/icons8-css-48.png);
+  background-color: rgba(0, 17, 255, 0.2);
+}
+
+.imag3{
+  background-image: url(/Frontend_Quiz_app/images/icons8-js-48.png);
+  background-color: rgba(246, 255, 0, 0.2);
+}
+
+.imag4{
+  background-image: url(/Frontend_Quiz_app/images/icons8-oreja-48.png);
+  background-color: rgba(179, 0, 255, 0.2);
+}
