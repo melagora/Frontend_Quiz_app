@@ -44,8 +44,8 @@ body {
 
 .temas .col {
   /* Estilos para las columnas de temas */
-  width: 300px;
-  height: 50px;
+  max-width: 100%;
+  height: auto;
   margin-bottom: 10px;
   border-radius: 10px;
   background-color: #3c4d66;
@@ -56,9 +56,8 @@ body {
   align-items: center; /* Vertically center text */
   justify-content: left; /* Horizontally center text (if needed) */
 }
-.temas .col:hover{
+.temas .col:hover {
   transform: scale(1.05);
-  
 }
 
 .divimg {
@@ -71,22 +70,22 @@ body {
   background-position: center;
 }
 
-.imag1{
-  background-image: url(/Frontend_Quiz_app/images/icons8-html-48.png);
+.imag1 {
+  background-image: url(../images/icons8-html-48.png);
   background-color: rgba(255, 123, 0, 0.2);
 }
 
-.imag2{
-  background-image: url(/Frontend_Quiz_app/images/icons8-css-48.png);
+.imag2 {
+  background-image: url(../images/icons8-css-48.png);
   background-color: rgba(0, 17, 255, 0.2);
 }
 
-.imag3{
-  background-image: url(/Frontend_Quiz_app/images/icons8-js-48.png);
+.imag3 {
+  background-image: url(../images/icons8-js-48.png);
   background-color: rgba(246, 255, 0, 0.2);
 }
 
-.imag4{
-  background-image: url(/Frontend_Quiz_app/images/icons8-oreja-48.png);
+.imag4 {
+  background-image: url(../images/icons8-oreja-48.png);
   background-color: rgba(179, 0, 255, 0.2);
 }
