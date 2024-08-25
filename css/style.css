@@ -8,6 +8,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.containerPrincipal {
+  background-color: black;
 }
 
 /* Estilos para la sección de títulos */
@@ -64,7 +69,6 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  margin-right: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,20 +76,20 @@ body {
 
 .imag1 {
   background-image: url(../images/icons8-html-48.png);
-  background-color: rgba(255, 123, 0, 0.2);
+  /*   background-color: rgba(255, 123, 0, 0.2); */
 }
 
 .imag2 {
   background-image: url(../images/icons8-css-48.png);
-  background-color: rgba(0, 17, 255, 0.2);
+  /*   background-color: rgba(0, 17, 255, 0.2); */
 }
 
 .imag3 {
   background-image: url(../images/icons8-js-48.png);
-  background-color: rgba(246, 255, 0, 0.2);
+  /*   background-color: rgba(246, 255, 0, 0.2); */
 }
 
 .imag4 {
   background-image: url(../images/icons8-oreja-48.png);
-  background-color: rgba(179, 0, 255, 0.2);
+  /*   background-color: rgba(179, 0, 255, 0.2); */
 }
