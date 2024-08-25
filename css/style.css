@@ -69,13 +69,9 @@ body {
 }
 
 /* ### answers style */
-.answer {
-  display: none;
-}
 
 #btn-respuesta {
   border: none;
   color: white;
   background-color: var(--morado);
-  display: none;
 }
