@@ -5,48 +5,21 @@ body {
   background-color: #313e51;
   color: white;
   height: 100vh; /* Set body height to 100% viewport height */
-  font-family: "Roboto", sans-serif;
   display: flex;
-}
-
-.containerPrincipal {
-  /* background-color: black;
-    max-width: 100%;
-*/
-  margin: auto;
-  display: flex;
-}
-
-.center {
-  margin: auto;
-  background-color: darkgray;
-  /*   max-width: 100%; */
-  margin: auto;
-}
-
-.titulo {
-  display: flex;
-  flex-direction: column;
-}
-.titulo-main {
-  font-size: 3rem;
-}
-.titulo-main span {
-  font-weight: 900;
-}
-
-.grid {
-  display: flex; /* Add flexbox layout */
-  align-items: center; /* Vertically center text */
+  align-items: center;
   justify-content: center;
-  margin: auto; /* Horizontally center text (if needed) */
 }
-<<<<<<< Updated upstream
-.temas .col {
-  padding: 0.75rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-=======
+
+/* Estilos para la sección de títulos */
+.titulo {
+  /* background-color: aqua; */
+  text-align: left;
+  margin-left: 100px;
+}
+
+.titulo p {
+  line-height: 0;
+}
 
 .welcomeTittle {
   font-size: 55px;
@@ -64,40 +37,52 @@ body {
   padding-top: 45px;
 }
 
-.temas {
+.temas, .answer {
   /* background-color: rgb(0, 41, 41); */
-  padding-left: 90px;
+  padding-left: 80px;
 }
 
-.temas .col, .btn {
+.btn, .temas .col, .answer .col {
   /* Estilos para las columnas de temas */
   width: 400px;
   height: 60px;
   margin-bottom: 10px;
   border-radius: 10px;
->>>>>>> Stashed changes
   background-color: #3c4d66;
   font-weight: bolder;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.477);
+
+  display: flex; /* Add flexbox layout */
+  align-items: center; /* Vertically center text */
+  justify-content: left; /* Horizontally center text (if needed) */
 }
-.temas .col:hover {
+
+.temas .col:hover{
   transform: scale(1.05);
-<<<<<<< Updated upstream
-  transition: all 0.2s ease-in-out;
-=======
+}
+
+.answer .col:hover{
+  transform: scale(1.05);
+}
+
+.btn{
+  color: white;
+  text-align: center;
 }
 
 .btn:hover{
   transform: scale(1.05);
->>>>>>> Stashed changes
 }
 
-/* ### answers style */
-.answer {
-  display: none;
+.divimg {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-<<<<<<< Updated upstream
-=======
 
 .imag1{
   background-image: url(/Frontend_Quiz_app/images/icons8-html-48.png);
@@ -138,4 +123,3 @@ body {
   background-image: url(/Frontend_Quiz_app/images/icons8-4-en-círculo-48.png);
   background-color: rgba(0, 255, 251, 0.2);
 }
->>>>>>> Stashed changes

@@ -1,3 +1,10 @@
+const temasDiv = document.querySelector(".col temas");
+
+temasDiv.addEventListener("click", () => {
+  // Replace "https://example.com" with the actual URL you want to redirect to
+  window.location.href = "https://google.com";
+});
+
 const question = [
     {
         question: "acá va la pregunta 1 sobre html",
