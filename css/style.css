@@ -5,10 +5,12 @@ body {
   background-color: #313e51;
   color: white;
   height: 100vh; /* Set body height to 100% viewport height */
+  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+<<<<<<< Updated upstream
 
 /* Estilos para la sección de títulos */
 .titulo {
@@ -49,16 +51,26 @@ body {
   margin-bottom: 10px;
   border-radius: 10px;
   background-color: #3c4d66;
+=======
+.temas .col {
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0.75rem;
+  border-radius: 20px;
+  background-color: var(--bg-item);
+>>>>>>> Stashed changes
   font-weight: bolder;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.477);
-
-  display: flex; /* Add flexbox layout */
-  align-items: center; /* Vertically center text */
-  justify-content: left; /* Horizontally center text (if needed) */
 }
+<<<<<<< Updated upstream
 
 .temas .col:hover{
   transform: scale(1.05);
+=======
+.temas .col:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+>>>>>>> Stashed changes
 }
 
 .answer .col:hover{
@@ -84,11 +96,12 @@ body {
   background-position: center;
 }
 
-.imag1{
-  background-image: url(/Frontend_Quiz_app/images/icons8-html-48.png);
-  background-color: rgba(255, 123, 0, 0.2);
+.correcta {
+  border: 2px solid green;
+  animation-duration: 1s;
 }
 
+<<<<<<< Updated upstream
 .imag2{
   background-image: url(/Frontend_Quiz_app/images/icons8-css-48.png);
   background-color: rgba(0, 17, 255, 0.2);
@@ -123,3 +136,9 @@ body {
   background-image: url(/Frontend_Quiz_app/images/icons8-4-en-círculo-48.png);
   background-color: rgba(0, 255, 251, 0.2);
 }
+=======
+.incorrecta {
+  border: 2px solid red;
+  animation-duration: 1s;
+}
+>>>>>>> Stashed changes
