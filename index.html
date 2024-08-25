@@ -21,48 +21,58 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section class="container containerPrincipal">
-      <article class="row justify-content-center center">
-        <div class="col-lg-6 titulo">
-          <p class="titulo-main">
-            Welcome to the <br /><span>Frontend Quiz!</span>
-          </p>
-          <p class="titulo-sub">Escoge un tema para iniciar</p>
-        </div>
-        <div class="answer" id="preguntas">Preguntas</div>
-
-        <div class="col temas container">
-          <div class="row grid">
-            <div class="col-10 col" id="casilla1">
-              <img src="../images/icons8-html-48.png" alt="HTML icon" />
-              HTML
-              <div id="item1" class="answer">option1</div>
-            </div>
-            <div class="col-10 col" id="casilla2">
-              <div class="quizOption">
-                <img src="../images/icons8-css-48.png" alt="Javascript icon" />
-                CSS
-              </div>
-              <div id="item2" class="answer">option2</div>
-            </div>
-            <div class="col-10 col" id="casilla3">
-              <img src="../images/icons8-js-48.png" alt="Javascript icon" />
-              JavaScript
-              <div id="item3" class="answer">option3</div>
-            </div>
-            <div class="col-10 col" id="casilla4">
-              <img src="../images/icons8-oreja-48.png" alt="Bootstrap icon" />
-              BootStrap
-              <div id="item4" class="answer">option4</div>
-            </div>
+    <section class="container row center">
+      <nav class="nav-bar p-5">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-toggle-on"></i>
+        <i class="fa-regular fa-moon"></i>
+      </nav>
+      <!-- columna izquierda -->
+      <div class="col-lg-6 media-title">
+        <p class="titulo">
+          Welcome to the
+          <span><br />Frontend Quiz!</span>
+        </p>
+        <p class="titulo-sub">Escoge un tema para iniciar</p>
+      </div>
+      <div class="answer" id="preguntas">Preguntas</div>
+      <!-- Columna -->
+      <div class="col temas">
+        <div class="row grid">
+          <div class="col-11 col" id="casilla1">
+            <img src="../images/icons8-html-48.png" alt="HTML icon" />
+            HTML
+            <div id="item1" class="answer">option1</div>
           </div>
+          <div class="col-11 col" id="casilla2">
+            <div class="quizOption">
+              <img src="../images/icons8-css-48.png" alt="Javascript icon" />
+              CSS
+            </div>
+            <div id="item2" class="answer">option2</div>
+          </div>
+          <div class="col-11 col" id="casilla3">
+            <img src="../images/icons8-js-48.png" alt="Javascript icon" />
+            JavaScript
+            <div id="item3" class="answer">option3</div>
+          </div>
+          <div class="col-11 col" id="casilla4">
+            <img src="../images/icons8-oreja-48.png" alt="Bootstrap icon" />
+            BootStrap
+            <div id="item4" class="answer">option4</div>
+          </div>
+          <button class="col-11 col" id="btn-respuesta">Respuesta</button>
         </div>
-      </article>
+      </div>
     </section>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7b866cf1b9.js"
       crossorigin="anonymous"
     ></script>
   </body>
