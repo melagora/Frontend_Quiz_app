@@ -131,3 +131,8 @@ body {
   background-image: url(/Frontend_Quiz_app/images/icons8-oreja-48.png);
   background-color: rgba(179, 0, 255, 0.2);
 }
+
+.incorrecta {
+  border: 2px solid red;
+  animation-duration: 1s;
+}
