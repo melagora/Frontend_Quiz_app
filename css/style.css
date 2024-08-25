@@ -1,11 +1,55 @@
 /* style.css */
+:root {
+  --morado: #a629f5;
+  --bg-gris: #313e51;
+  --bg-item: #3c4d67;
+}
 
 /* Estilos generales */
 body {
-  background-color: #313e51;
+  background-color: var(--bg-gris);
   color: white;
   height: 100vh; /* Set body height to 100% viewport height */
   display: flex;
+}
+.nav-bar {
+  text-align: end;
+  padding-left: 0.5rem;
+}
+.nav-bar i {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.center {
+  /*   background-color: darkgray; */
+  margin: auto;
+  display: flex;
+}
+
+.titulo {
+  font-size: 2rem;
+  padding-right: 1rem;
+  letter-spacing: 0.2rem;
+}
+.titulo-sub {
+  font-style: italic;
+  color: darkgray;
+  font-size: 1rem;
+}
+.titulo span {
+  font-weight: 900;
+}
+
+@media (min-width: 600px) {
+  .titulo {
+    font-size: 3rem;
+  }
+  .titulo-sub {
+    font-size: 1.5rem;
+  }
+}
+
+.grid {
   align-items: center;
   justify-content: center;
 }
@@ -43,12 +87,11 @@ body {
 }
 
 .temas .col {
-  /* Estilos para las columnas de temas */
-  width: 400px;
-  height: 60px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background-color: #3c4d66;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0.75rem;
+  border-radius: 20px;
+  background-color: var(--bg-item);
   font-weight: bolder;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.477);
 
@@ -61,14 +104,12 @@ body {
   
 }
 
-.divimg {
-  width: 45px;
-  height: 45px;
-  border-radius: 5px;
-  margin-right: 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+/* ### answers style */
+
+#btn-respuesta {
+  border: none;
+  color: white;
+  background-color: var(--morado);
 }
 
 .imag1{
