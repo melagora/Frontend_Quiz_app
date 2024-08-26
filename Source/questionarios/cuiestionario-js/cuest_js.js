@@ -8,34 +8,34 @@ const resultado = document.getElementById('resultado'); // Elemento para mostrar
 // Datos del cuestionario (reemplaza con tus propias preguntas y respuestas)
 const quizData = [
     {
-        pregunta: "Pregunta 1",
+        pregunta: "¿Cómo se declara una variable en JavaScript?",
         respuestas: [
-            "Respuesta 1",
-            "Respuesta 2",
-            "Respuesta 3",
-            "Respuesta 4"
+            "int",
+            "dim",
+            "var - let",
+            "for - while"
         ],
         respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
     },
     {
-        pregunta: "Pregunta 2",
+        pregunta: "¿Cuál es el método utilizado para convertir una cadena de texto a un número entero en JavaScript?",
         respuestas: [
-            "Respuesta 1",
-            "Respuesta 2",
-            "Respuesta 3",
-            "Respuesta 4"
+            "parseInt()",
+            "Number()",
+            "toInt()",
+            "convert()"
         ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
     },
     {
-        pregunta: "Pregunta 3",
+        pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
         respuestas: [
-            "Respuesta 1",
-            "Respuesta 2",
-            "Respuesta 3",
-            "Respuesta 4"
+            "getElementById()",
+            "querySelector()",
+            "getElementByClass()",
+            "getById()"
         ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
     },
     // Agrega más preguntas y respuestas aquí
 ];
@@ -78,52 +78,64 @@ function seleccionarRespuesta(event) {
 // Función para verificar la respuesta y avanzar a la siguiente pregunta
 function checkAnswer() {
     const respuestaSeleccionada = document.querySelector('.seleccionada');
-    if (!respuestaSeleccionada) {
-        alert('Por favor, selecciona una respuesta');
-        return;
-    }
-
-    const indiceRespuestaSeleccionada = Array.from(casillas).indexOf(respuestaSeleccionada);
-    const respuestaCorrecta = quizData[currentQuestionIndex].respuestaCorrecta;
 
     // Quitar el borde blanco a todas las casillas
     casillas.forEach(casilla => casilla.classList.remove('seleccionada'));
 
     // Agregar la clase de animación correspondiente
-    if (indiceRespuestaSeleccionada === respuestaCorrecta) {
-        respuestaSeleccionada.classList.add('animate__animated', 'animate__bounceIn');
-        respuestaSeleccionada.classList.add('correcta');
-    } else {
-        respuestaSeleccionada.classList.add('animate__animated', 'animate__shakeX');
-        respuestaSeleccionada.classList.add('incorrecta');
-    }
+    if (respuestaSeleccionada) {
+        const indiceRespuestaSeleccionada = Array.from(casillas).indexOf(respuestaSeleccionada);
+        const respuestaCorrecta = quizData[currentQuestionIndex].respuestaCorrecta;
 
-    if (indiceRespuestaSeleccionada === respuestaCorrecta) {
-        puntaje++; // Incrementar el puntaje si la respuesta es correcta
-    }
-
-    // Avanzar a la siguiente pregunta o mostrar el resultado final después de la animación
-    setTimeout(() => {
-        currentQuestionIndex++;
-        // Quitar las clases de animación y borde
-        casillas.forEach(casilla => {
-            casilla.classList.remove('animate__animated', 'animate__bounceIn', 'animate__shakeX', 'correcta', 'incorrecta');
-        });
-
-        if (currentQuestionIndex === quizData.length) {
-            // Si es la última pregunta, cambiar el texto del botón
-            btnRespuesta.textContent = "Continuar";
+        if (indiceRespuestaSeleccionada === respuestaCorrecta) {
+            respuestaSeleccionada.classList.add('animate__animated', 'animate__bounceIn');
+            respuestaSeleccionada.classList.add('correcta');
         } else {
-            loadQuestion();
+            respuestaSeleccionada.classList.add('animate__animated', 'animate__shakeX');
+            respuestaSeleccionada.classList.add('incorrecta');
         }
-    }, 2000); // Esperar 2 segundos para la animación
-}
 
-function showResult() {
-    resultado.textContent = `¡Has obtenido ${puntaje} puntos de ${quizData.length}!`;
+        if (indiceRespuestaSeleccionada === respuestaCorrecta) {
+            puntaje++;
+        }
 
-    // Mostrar un resumen detallado del desempeño (opcional)
-    // ...
+        // Avanzar a la siguiente pregunta o mostrar el resultado final después de la animación
+        setTimeout(() => {
+            currentQuestionIndex++;
+            // Quitar las clases de animación y borde
+            casillas.forEach(casilla => {
+                casilla.classList.remove('animate__animated', 'animate__bounceIn', 'animate__shakeX', 'correcta', 'incorrecta');
+            });
+
+            if (currentQuestionIndex === quizData.length) {
+                // Si es la última pregunta, mostrar una alerta con el puntaje
+                alert(`¡Has obtenido ${puntaje} puntos de ${quizData.length} posibles!`);
+
+                // Cambiar el texto del botón y redirigir
+                btnRespuesta.textContent = "Volver al inicio";
+                btnRespuesta.onclick = () => {
+                    if (btnRespuesta.textContent === "Volver al inicio") {
+                        window.location.href = "/Frontend_Quiz_app/index.html";
+                    } else {
+                        // Solo verificar la respuesta si el botón dice "Respuesta"
+                        const respuestaSeleccionada = document.querySelector('.seleccionada');
+                        if (!respuestaSeleccionada) {
+                            alert('Por favor, selecciona una respuesta');
+                            return;
+                        }
+                        // ... resto de la lógica de checkAnswer ...
+                    }
+                };
+            } else {
+                loadQuestion();
+            }
+        }, 2000);
+    } else {
+        // Si no se ha seleccionado ninguna respuesta y el botón dice "Respuesta"
+        if (btnRespuesta.textContent === "Respuesta") {
+            alert('Por favor, selecciona una respuesta');
+        }
+    }
 }
 
 // Agregar eventos a las casillas y al botón
@@ -135,15 +147,6 @@ btnRespuesta.addEventListener('click', checkAnswer);
 // Cargar la pregunta inicial
 loadQuestion();
 
-// Botón para reiniciar el cuestionario
-const btnReiniciar = document.getElementById('btn-reiniciar');
-btnReiniciar.addEventListener('click', () => {
-    currentQuestionIndex = 0;
-    puntaje = 0;
-    loadQuestion();
-    resultado.textContent = '';
-});
-
 const style = document.createElement('style');
 style.innerHTML = `
 .seleccionada { border: 2px solid white; }
@@ -151,3 +154,4 @@ style.innerHTML = `
 .incorrecta { border: 2px solid red; }
 `;
 document.head.appendChild(style);
+

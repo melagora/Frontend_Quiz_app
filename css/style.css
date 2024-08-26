@@ -136,3 +136,13 @@ body {
   border: 2px solid red;
   animation-duration: 1s;
 }
+
+#btn-respuesta {
+  /* Estilos normales */
+}
+
+#btn-respuesta.volver-inicio {
+  /* Estilos para cuando el botón dice "Volver al inicio" */
+  background-color: blue;
+  color: white;
+}
