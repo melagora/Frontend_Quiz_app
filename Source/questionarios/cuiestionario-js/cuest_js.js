@@ -3,7 +3,8 @@ const preguntaElement = document.getElementById('preguntas');
 const casillas = document.querySelectorAll('.col#casillas');
 const btnRespuesta = document.getElementById('btn-respuesta');
 const tituloSub = document.querySelector('.titulo-sub');
-const resultado = document.getElementById('resultado'); // Elemento para mostrar el resultado
+const resultado = document.querySelector(".container");
+
 
 // Datos del cuestionario (reemplaza con tus propias preguntas y respuestas)
 const quizData = [
@@ -30,12 +31,82 @@ const quizData = [
     {
         pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
         respuestas: [
-            "getElementById()",
             "querySelector()",
             "getElementByClass()",
-            "getById()"
+            "getById()",
+            "getElementById()"
+        ],
+        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cómo se define una función en JavaScript?",
+        respuestas: [
+            "def myFunction()",
+            "function myFunction()",
+            "function:myFunction()",
+            "void myFunction()"
+        ],
+        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
+        respuestas: [
+            "stopPropagation()",
+            "preventDefault()",
+            "stopEvent()",
+            "haltEvent()"
+        ],
+        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
+        respuestas: [
+            "push()",
+            "add()",
+            "append()",
+            "insert()"
+        ],
+        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
+        respuestas: [
+            "foreach",
+            "do-while",
+            "while",
+            "for"
+        ],
+        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
+        respuestas: [
+            "qcombine()",
+            "merge()",
+            "join()",
+            "concat()"
+        ],
+        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
+        respuestas: [
+            "object",
+            "null",
+            "undefided",
+            "boolean"
         ],
         respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cómo se define una función de flecha en JavaScript?",
+        respuestas: [
+            "let func = => {}",
+            "let func = -> {}",
+            "let func = () => {}",
+            "let func = function() {}"
+        ],
+        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
     },
     // Agrega más preguntas y respuestas aquí
 ];
@@ -46,6 +117,7 @@ let puntaje = 0; // Inicializar el puntaje
 
 // Función para cargar la pregunta actual
 function loadQuestion() {
+
     const currentQuestion = quizData[currentQuestionIndex];
 
     // Actualizar el texto de la pregunta
@@ -59,7 +131,7 @@ function loadQuestion() {
 
     // Actualizar el número de pregunta
     tituloSub.textContent = `Pregunta ${currentQuestionIndex + 1} de ${quizData.length}`;
-    btnRespuesta.textContent = "Respuesta"; // Inicializar el texto del botón
+    btnRespuesta.textContent = "Responder"; // Inicializar el texto del botón
 
 
 }
@@ -99,6 +171,8 @@ function checkAnswer() {
             puntaje++;
         }
 
+        progressBar();
+
         // Avanzar a la siguiente pregunta o mostrar el resultado final después de la animación
         setTimeout(() => {
             currentQuestionIndex++;
@@ -107,35 +181,98 @@ function checkAnswer() {
                 casilla.classList.remove('animate__animated', 'animate__bounceIn', 'animate__shakeX', 'correcta', 'incorrecta');
             });
 
-            if (currentQuestionIndex === quizData.length) {
-                // Si es la última pregunta, mostrar una alerta con el puntaje
-                alert(`¡Has obtenido ${puntaje} puntos de ${quizData.length} posibles!`);
-
-                // Cambiar el texto del botón y redirigir
-                btnRespuesta.textContent = "Volver al inicio";
-                btnRespuesta.onclick = () => {
-                    if (btnRespuesta.textContent === "Volver al inicio") {
-                        window.location.href = "/Frontend_Quiz_app/index.html";
-                    } else {
-                        // Solo verificar la respuesta si el botón dice "Respuesta"
-                        const respuestaSeleccionada = document.querySelector('.seleccionada');
-                        if (!respuestaSeleccionada) {
-                            alert('Por favor, selecciona una respuesta');
-                            return;
-                        }
-                        // ... resto de la lógica de checkAnswer ...
-                    }
-                };
+            if (currentQuestionIndex >= quizData.length) {
+                showResult();
+                
             } else {
                 loadQuestion();
             }
         }, 2000);
     } else {
         // Si no se ha seleccionado ninguna respuesta y el botón dice "Respuesta"
-        if (btnRespuesta.textContent === "Respuesta") {
+        if (btnRespuesta.textContent === "Responder") {
             alert('Por favor, selecciona una respuesta');
         }
     }
+}
+
+
+//funcion para crear la barra de progreso
+function progressBar() {
+    let bar = document.getElementById('barra');
+    let currentWidth = parseInt(bar.style.width.replace('%', '')) || 0;
+
+    currentWidth += 10;
+
+    if (currentWidth >= 100) {
+        currentWidth = 100;
+        bar.classList.add('barra-final');
+    }
+
+    bar.style.width = currentWidth + '%';
+}
+
+// Función para mostrar el resultado final
+function showResult() {
+    resultado.innerHTML = `
+    <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Score</title>
+      <!-- Bootstrap -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+      />
+      <!-- google font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="../../../css/style.css" />
+    </head>
+    <body>
+      <section class="container row center">
+        <nav class="nav-bar p-5">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-toggle-on"></i>
+          <i class="fa-regular fa-moon"></i>
+        </nav>
+        <!-- columna izquierda -->
+        <div class="col-lg-6 media-title">
+          <p class="titulo">
+            Quiz Completed
+            <span><br />You scored...</span>
+          </p>
+        </div>
+        <!-- Columna -->
+        <div class="col temas">
+            <div class="col-11 col text-center align-items-center h-auto" >
+              <div class="score" style="font-size: 9rem;" id="preguntas">${score}</div>
+              <p class="titulo-sub">out of ${quizData.length}</p>
+            </div>
+            <button class="col-11  btn btn-primary" id="btn-respuesta"><a href="../../../index.html">Jugar de nuevo</a></button>
+          </div>
+        </div>
+      </section>
+  
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://kit.fontawesome.com/7b866cf1b9.js"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </html>`;
 }
 
 // Agregar eventos a las casillas y al botón
