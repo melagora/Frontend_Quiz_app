@@ -28,92 +28,93 @@ const quizData = [
         ],
         respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
     },
-    {
-        pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
-        respuestas: [
-            "querySelector()",
-            "getElementByClass()",
-            "getById()",
-            "getElementById()"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se define una función en JavaScript?",
-        respuestas: [
-            "def myFunction()",
-            "function myFunction()",
-            "function:myFunction()",
-            "void myFunction()"
-        ],
-        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
-        respuestas: [
-            "stopPropagation()",
-            "preventDefault()",
-            "stopEvent()",
-            "haltEvent()"
-        ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
-        respuestas: [
-            "push()",
-            "add()",
-            "append()",
-            "insert()"
-        ],
-        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
-        respuestas: [
-            "foreach",
-            "do-while",
-            "while",
-            "for"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
-        respuestas: [
-            "qcombine()",
-            "merge()",
-            "join()",
-            "concat()"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
-        respuestas: [
-            "object",
-            "null",
-            "undefided",
-            "boolean"
-        ],
-        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se define una función de flecha en JavaScript?",
-        respuestas: [
-            "let func = => {}",
-            "let func = -> {}",
-            "let func = () => {}",
-            "let func = function() {}"
-        ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    },
+    // {
+    //     pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
+    //     respuestas: [
+    //         "querySelector()",
+    //         "getElementByClass()",
+    //         "getById()",
+    //         "getElementById()"
+    //     ],
+    //     respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    // },
+    // {
+    //     pregunta: "¿Cómo se define una función en JavaScript?",
+    //     respuestas: [
+    //         "def myFunction()",
+    //         "function myFunction()",
+    //         "function:myFunction()",
+    //         "void myFunction()"
+    //     ],
+    //     respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+    // },
+    // {
+    //     pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
+    //     respuestas: [
+    //         "stopPropagation()",
+    //         "preventDefault()",
+    //         "stopEvent()",
+    //         "haltEvent()"
+    //     ],
+    //     respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+    // },
+    // {
+    //     pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
+    //     respuestas: [
+    //         "push()",
+    //         "add()",
+    //         "append()",
+    //         "insert()"
+    //     ],
+    //     respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+    // },
+    // {
+    //     pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
+    //     respuestas: [
+    //         "foreach",
+    //         "do-while",
+    //         "while",
+    //         "for"
+    //     ],
+    //     respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    // },
+    // {
+    //     pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
+    //     respuestas: [
+    //         "qcombine()",
+    //         "merge()",
+    //         "join()",
+    //         "concat()"
+    //     ],
+    //     respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    // },
+    // {
+    //     pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
+    //     respuestas: [
+    //         "object",
+    //         "null",
+    //         "undefided",
+    //         "boolean"
+    //     ],
+    //     respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
+    // },
+    // {
+    //     pregunta: "¿Cómo se define una función de flecha en JavaScript?",
+    //     respuestas: [
+    //         "let func = => {}",
+    //         "let func = -> {}",
+    //         "let func = () => {}",
+    //         "let func = function() {}"
+    //     ],
+    //     respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+    // },
     // Agrega más preguntas y respuestas aquí
 ];
 
 // Índice de la pregunta actual
 let currentQuestionIndex = 0;
 let puntaje = 0; // Inicializar el puntaje
+const totalPreguntas = quizData.length;
 
 // Función para cargar la pregunta actual
 function loadQuestion() {
@@ -150,129 +151,130 @@ function seleccionarRespuesta(event) {
 // Función para verificar la respuesta y avanzar a la siguiente pregunta
 function checkAnswer() {
     const respuestaSeleccionada = document.querySelector('.seleccionada');
-
+  
     // Quitar el borde blanco a todas las casillas
     casillas.forEach(casilla => casilla.classList.remove('seleccionada'));
-
+  
     // Agregar la clase de animación correspondiente
     if (respuestaSeleccionada) {
-        const indiceRespuestaSeleccionada = Array.from(casillas).indexOf(respuestaSeleccionada);
-        const respuestaCorrecta = quizData[currentQuestionIndex].respuestaCorrecta;
-
-        if (indiceRespuestaSeleccionada === respuestaCorrecta) {
-            respuestaSeleccionada.classList.add('animate__animated', 'animate__bounceIn');
-            respuestaSeleccionada.classList.add('correcta');
+      const indiceRespuestaSeleccionada = Array.from(casillas).indexOf(respuestaSeleccionada);
+      const respuestaCorrecta = quizData[currentQuestionIndex].respuestaCorrecta;
+  
+      if (indiceRespuestaSeleccionada === respuestaCorrecta) {
+        respuestaSeleccionada.classList.add('animate__animated', 'animate__bounceIn', 'correcta');
+      } else {
+        respuestaSeleccionada.classList.add('animate__animated', 'animate__shakeX', 'incorrecta');
+      }
+  
+      if (indiceRespuestaSeleccionada === respuestaCorrecta) {
+        puntaje++;
+      }
+  
+      progressBar(totalPreguntas);
+  
+      // Avanzar a la siguiente pregunta o mostrar el resultado final
+      setTimeout(() => {
+        currentQuestionIndex++;
+  
+        // Quitar las clases de animación y borde
+        casillas.forEach(casilla => {
+          casilla.classList.remove('animate__animated', 'animate__bounceIn', 'animate__shakeX', 'correcta', 'incorrecta');
+        });
+  
+        if (currentQuestionIndex >= quizData.length) {
+          // Mostrar los resultados
+          showResult();
         } else {
-            respuestaSeleccionada.classList.add('animate__animated', 'animate__shakeX');
-            respuestaSeleccionada.classList.add('incorrecta');
+          // Cargar la siguiente pregunta
+          loadQuestion();
         }
-
-        if (indiceRespuestaSeleccionada === respuestaCorrecta) {
-            puntaje++;
-        }
-
-        progressBar();
-
-        // Avanzar a la siguiente pregunta o mostrar el resultado final después de la animación
-        setTimeout(() => {
-            currentQuestionIndex++;
-            // Quitar las clases de animación y borde
-            casillas.forEach(casilla => {
-                casilla.classList.remove('animate__animated', 'animate__bounceIn', 'animate__shakeX', 'correcta', 'incorrecta');
-            });
-
-            if (currentQuestionIndex >= quizData.length) {
-                showResult();
-                
-            } else {
-                loadQuestion();
-            }
-        }, 2000);
+      }, 2000);
     } else {
-        // Si no se ha seleccionado ninguna respuesta y el botón dice "Respuesta"
-        if (btnRespuesta.textContent === "Responder") {
-            alert('Por favor, selecciona una respuesta');
-        }
+      // Si no se ha seleccionado ninguna respuesta
+      if (btnRespuesta.textContent === "Responder") {
+        alert('Por favor, selecciona una respuesta');
+      }
     }
-}
+  }
 
 
 //funcion para crear la barra de progreso
-function progressBar() {
+function progressBar(totalPreguntas) {
     let bar = document.getElementById('barra');
+    let incrementoPorPregunta = 100 / totalPreguntas; // Calcula el incremento por pregunta
     let currentWidth = parseInt(bar.style.width.replace('%', '')) || 0;
-
-    currentWidth += 10;
-
+  
+    currentWidth += incrementoPorPregunta;
+  
     if (currentWidth >= 100) {
-        currentWidth = 100;
-        bar.classList.add('barra-final');
+      currentWidth = 100;
+      bar.classList.add('barra-final');
     }
-
+  
     bar.style.width = currentWidth + '%';
-}
+  }
 
 // Función para mostrar el resultado final
 function showResult() {
     resultado.innerHTML = `
-    <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Score</title>
-      <!-- Bootstrap -->
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-        crossorigin="anonymous"
-      />
-      <!-- google font -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet"
-      />
-      <link rel="stylesheet" href="../../../css/style.css" />
-    </head>
-    <body>
-      <section class="container row center">
-        <nav class="nav-bar p-5">
-          <i class="fa-solid fa-sun"></i>
-          <i class="fa-solid fa-toggle-on"></i>
-          <i class="fa-regular fa-moon"></i>
-        </nav>
-        <!-- columna izquierda -->
-        <div class="col-lg-6 media-title">
-          <p class="titulo">
-            Quiz Completed
-            <span><br />You scored...</span>
-          </p>
-        </div>
-        <!-- Columna -->
-        <div class="col temas">
-            <div class="col-11 col text-center align-items-center h-auto" >
-              <div class="score" style="font-size: 9rem;" id="preguntas">${score}</div>
-              <p class="titulo-sub">out of ${quizData.length}</p>
-            </div>
-            <button class="col-11  btn btn-primary" id="btn-respuesta"><a href="../../../index.html">Jugar de nuevo</a></button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Frontend_Quiz_app/css/style.css"/>
+  </head>
+  <body>
+    <section class="container row center">
+      <nav class="nav-bar p-5">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-toggle-on"></i>
+        <i class="fa-regular fa-moon"></i>
+      </nav>
+      
+          <div class="col-lg-6 media-title">
+            <p class="titulo">
+              Felicidades
+              <span><br />Has completado el cuestionario con: </span>
+            </p>
           </div>
-        </div>
-      </section>
-  
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://kit.fontawesome.com/7b866cf1b9.js"
-        crossorigin="anonymous"
-      ></script>
-    </body>
-  </html>`;
+          <div class="col temas">
+              <div class="col-11 col text-center align-items-center h-auto" >
+                <div class="score" style="font-size: 9rem;" id="preguntas">${puntaje}</div>
+                <p class="titulo-sub">respuestas buenas de ${quizData.length}.</p>
+              </div>
+              <button class="col col" id="btn-respuesta" onclick="location.reload()">Jugar de nuevo</button>
+              <button class="col col" id="btn-respuesta" onclick="volverAlInicio()">Volver al inicio</button>
+            </div>
+          </div>
+        </section>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7b866cf1b9.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>`;
 }
 
 // Agregar eventos a las casillas y al botón
@@ -283,6 +285,10 @@ btnRespuesta.addEventListener('click', checkAnswer);
 
 // Cargar la pregunta inicial
 loadQuestion();
+
+function volverAlInicio() {
+    window.location.href = "/Frontend_Quiz_app/index.html";
+  }
 
 const style = document.createElement('style');
 style.innerHTML = `
