@@ -28,86 +28,86 @@ const quizData = [
         ],
         respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
     },
-    // {
-    //     pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
-    //     respuestas: [
-    //         "querySelector()",
-    //         "getElementByClass()",
-    //         "getById()",
-    //         "getElementById()"
-    //     ],
-    //     respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    // },
-    // {
-    //     pregunta: "¿Cómo se define una función en JavaScript?",
-    //     respuestas: [
-    //         "def myFunction()",
-    //         "function myFunction()",
-    //         "function:myFunction()",
-    //         "void myFunction()"
-    //     ],
-    //     respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    // },
-    // {
-    //     pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
-    //     respuestas: [
-    //         "stopPropagation()",
-    //         "preventDefault()",
-    //         "stopEvent()",
-    //         "haltEvent()"
-    //     ],
-    //     respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    // },
-    // {
-    //     pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
-    //     respuestas: [
-    //         "push()",
-    //         "add()",
-    //         "append()",
-    //         "insert()"
-    //     ],
-    //     respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    // },
-    // {
-    //     pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
-    //     respuestas: [
-    //         "foreach",
-    //         "do-while",
-    //         "while",
-    //         "for"
-    //     ],
-    //     respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    // },
-    // {
-    //     pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
-    //     respuestas: [
-    //         "qcombine()",
-    //         "merge()",
-    //         "join()",
-    //         "concat()"
-    //     ],
-    //     respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    // },
-    // {
-    //     pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
-    //     respuestas: [
-    //         "object",
-    //         "null",
-    //         "undefided",
-    //         "boolean"
-    //     ],
-    //     respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
-    // },
-    // {
-    //     pregunta: "¿Cómo se define una función de flecha en JavaScript?",
-    //     respuestas: [
-    //         "let func = => {}",
-    //         "let func = -> {}",
-    //         "let func = () => {}",
-    //         "let func = function() {}"
-    //     ],
-    //     respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    // },
+    {
+        pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
+        respuestas: [
+            "querySelector()",
+            "getElementByClass()",
+            "getById()",
+            "getElementById()"
+        ],
+        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cómo se define una función en JavaScript?",
+        respuestas: [
+            "def myFunction()",
+            "function myFunction()",
+            "function:myFunction()",
+            "void myFunction()"
+        ],
+        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
+        respuestas: [
+            "stopPropagation()",
+            "preventDefault()",
+            "stopEvent()",
+            "haltEvent()"
+        ],
+        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
+        respuestas: [
+            "push()",
+            "add()",
+            "append()",
+            "insert()"
+        ],
+        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
+        respuestas: [
+            "foreach",
+            "do-while",
+            "while",
+            "for"
+        ],
+        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
+        respuestas: [
+            "qcombine()",
+            "merge()",
+            "join()",
+            "concat()"
+        ],
+        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
+        respuestas: [
+            "object",
+            "null",
+            "undefided",
+            "boolean"
+        ],
+        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
+    },
+    {
+        pregunta: "¿Cómo se define una función de flecha en JavaScript?",
+        respuestas: [
+            "let func = => {}",
+            "let func = -> {}",
+            "let func = () => {}",
+            "let func = function() {}"
+        ],
+        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+    },
     // Agrega más preguntas y respuestas aquí
 ];
 
