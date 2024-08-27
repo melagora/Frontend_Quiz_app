@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/Frontend_Quiz_app/css/style.css" />
   </head>
   <body>
     <section class="container row center">
@@ -35,31 +35,28 @@
         </p>
         <p class="titulo-sub">Escoge un tema para iniciar</p>
       </div>
-      <div class="answer" id="preguntas">Preguntas</div>
       <!-- Columna -->
-      <div class="col temas">
+      <div class="col-lg-6 temas">
         <div class="row grid">
-          <div class="col-11 col" id="casilla1">
-            <img src="../images/icons8-html-48.png" alt="HTML icon" />
+          <div class="col-11 col" id="casilla3" onclick="redirectToJavascriptQuiz()">
+            <img src="/Frontend_Quiz_app/images/icons8-html-48.png" alt="Javascript icon" />
             HTML
-            <div id="item1" class="answer">option1</div>
+            <div id="item3" class="answer"></div>
           </div>
-          <div class="col-11 col" id="casilla2">
-            <div class="quizOption">
-              <img src="../images/icons8-css-48.png" alt="Javascript icon" />
-              CSS
-            </div>
-            <div id="item2" class="answer">option2</div>
+          <div class="col-11 col" id="casilla3" onclick="redirectToJavascriptQuiz()">
+            <img src="/Frontend_Quiz_app/images/icons8-css-48.png" alt="Javascript icon" />
+            CSS
+            <div id="item3" class="answer"></div>
           </div>
-          <div class="col-11 col" id="casilla3">
-            <img src="../images/icons8-js-48.png" alt="Javascript icon" />
+          <div class="col-11 col" id="casilla3" onclick="redirectToJavascriptQuiz()">
+            <img src="/Frontend_Quiz_app/images/icons8-js-48.png" alt="Javascript icon" />
             JavaScript
-            <div id="item3" class="answer">option3</div>
+            <div id="item3" class="answer"></div>
           </div>
-          <div class="col-11 col" id="casilla4">
-            <img src="../images/icons8-oreja-48.png" alt="Bootstrap icon" />
+          <div class="col-11 col" id="casilla3" onclick="redirectToJavascriptQuiz()">
+            <img src="/Frontend_Quiz_app/images/icons8-oreja-48.png" alt="Javascript icon" />
             BootStrap
-            <div id="item4" class="answer">option4</div>
+            <div id="item3" class="answer"></div>
           </div>
         </div>
       </div>
@@ -74,5 +71,6 @@
       src="https://kit.fontawesome.com/7b866cf1b9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/Frontend_Quiz_app/Source/source.js"></script>
   </body>
 </html>
