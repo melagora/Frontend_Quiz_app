@@ -18,97 +18,6 @@ const quizData = [
         ],
         respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
     },
-    {
-        pregunta: "¿Cuál es el método utilizado para convertir una cadena de texto a un número entero en JavaScript?",
-        respuestas: [
-            "parseInt()",
-            "Number()",
-            "toInt()",
-            "convert()"
-        ],
-        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
-        respuestas: [
-            "querySelector()",
-            "getElementByClass()",
-            "getById()",
-            "getElementById()"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se define una función en JavaScript?",
-        respuestas: [
-            "def myFunction()",
-            "function myFunction()",
-            "function:myFunction()",
-            "void myFunction()"
-        ],
-        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
-        respuestas: [
-            "stopPropagation()",
-            "preventDefault()",
-            "stopEvent()",
-            "haltEvent()"
-        ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
-        respuestas: [
-            "push()",
-            "add()",
-            "append()",
-            "insert()"
-        ],
-        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
-        respuestas: [
-            "foreach",
-            "do-while",
-            "while",
-            "for"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
-        respuestas: [
-            "qcombine()",
-            "merge()",
-            "join()",
-            "concat()"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
-        respuestas: [
-            "object",
-            "null",
-            "undefided",
-            "boolean"
-        ],
-        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se define una función de flecha en JavaScript?",
-        respuestas: [
-            "let func = => {}",
-            "let func = -> {}",
-            "let func = () => {}",
-            "let func = function() {}"
-        ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    },
-    // Agrega más preguntas y respuestas aquí
 ];
 
 // Índice de la pregunta actual
@@ -237,7 +146,7 @@ function showResult() {
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/Frontend_Quiz_app/css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
   </head>
   <body>
     <section class="container row center">
@@ -294,7 +203,7 @@ const style = document.createElement('style');
 style.innerHTML = `
 .seleccionada { border: 2px solid white; }
 .correcta { border: 2px solid green; }
-.incorrecta { border: 2px solid red; }`;
-
+.incorrecta { border: 2px solid red; }
+`;
 document.head.appendChild(style);
 
