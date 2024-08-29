@@ -8,107 +8,107 @@ const resultado = document.querySelector(".container");
 
 // Datos del cuestionario (reemplaza con tus propias preguntas y respuestas)
 const quizData = [
-    {
-        pregunta: "¿Cómo se declara una variable en JavaScript?",
-        respuestas: [
-            "int",
-            "dim",
-            "var - let",
-            "for - while"
-        ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál es el método utilizado para convertir una cadena de texto a un número entero en JavaScript?",
-        respuestas: [
-            "parseInt()",
-            "Number()",
-            "toInt()",
-            "convert()"
-        ],
-        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
-        respuestas: [
-            "querySelector()",
-            "getElementByClass()",
-            "getById()",
-            "getElementById()"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se define una función en JavaScript?",
-        respuestas: [
-            "def myFunction()",
-            "function myFunction()",
-            "function:myFunction()",
-            "void myFunction()"
-        ],
-        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
-        respuestas: [
-            "stopPropagation()",
-            "preventDefault()",
-            "stopEvent()",
-            "haltEvent()"
-        ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
-        respuestas: [
-            "push()",
-            "add()",
-            "append()",
-            "insert()"
-        ],
-        respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
-        respuestas: [
-            "foreach",
-            "do-while",
-            "while",
-            "for"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
-        respuestas: [
-            "qcombine()",
-            "merge()",
-            "join()",
-            "concat()"
-        ],
-        respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
-        respuestas: [
-            "object",
-            "null",
-            "undefided",
-            "boolean"
-        ],
-        respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
-    },
-    {
-        pregunta: "¿Cómo se define una función de flecha en JavaScript?",
-        respuestas: [
-            "let func = => {}",
-            "let func = -> {}",
-            "let func = () => {}",
-            "let func = function() {}"
-        ],
-        respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
-    },
-    // Agrega más preguntas y respuestas aquí
+  {
+    pregunta: "¿Cómo se declara una variable en JavaScript?",
+    respuestas: [
+      "int",
+      "dim",
+      "var - let",
+      "for - while"
+    ],
+    respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Cuál es el método utilizado para convertir una cadena de texto a un número entero en JavaScript?",
+    respuestas: [
+      "parseInt()",
+      "Number()",
+      "toInt()",
+      "convert()"
+    ],
+    respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Qué método de JavaScript se usa para seleccionar un elemento por su ID?",
+    respuestas: [
+      "querySelector()",
+      "getElementByClass()",
+      "getById()",
+      "getElementById()"
+    ],
+    respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Cómo se define una función en JavaScript?",
+    respuestas: [
+      "def myFunction()",
+      "function myFunction()",
+      "function:myFunction()",
+      "void myFunction()"
+    ],
+    respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Cuál de los siguientes métodos detiene la propagación de un evento en JavaScript?",
+    respuestas: [
+      "stopPropagation()",
+      "preventDefault()",
+      "stopEvent()",
+      "haltEvent()"
+    ],
+    respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Cómo se agrega un elemento al final de un array en JavaScript?",
+    respuestas: [
+      "push()",
+      "add()",
+      "append()",
+      "insert()"
+    ],
+    respuestaCorrecta: 1 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Cuál de las siguientes estructuras de control se usa para recorrer todos los elementos de un array en JavaScript?",
+    respuestas: [
+      "foreach",
+      "do-while",
+      "while",
+      "for"
+    ],
+    respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Qué método de JavaScript se usa para combinar dos o más arrays en uno solo?",
+    respuestas: [
+      "qcombine()",
+      "merge()",
+      "join()",
+      "concat()"
+    ],
+    respuestaCorrecta: 3 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Cuál es el valor de retorno de typeof null en JavaScript?",
+    respuestas: [
+      "object",
+      "null",
+      "undefided",
+      "boolean"
+    ],
+    respuestaCorrecta: 0 // Índice de la respuesta correcta (basado en 0)
+  },
+  {
+    pregunta: "¿Cómo se define una función de flecha en JavaScript?",
+    respuestas: [
+      "let func = => {}",
+      "let func = -> {}",
+      "let func = () => {}",
+      "let func = function() {}"
+    ],
+    respuestaCorrecta: 2 // Índice de la respuesta correcta (basado en 0)
+  },
+  // Agrega más preguntas y respuestas aquí
 ];
 
 // Índice de la pregunta actual
@@ -116,107 +116,117 @@ let currentQuestionIndex = 0;
 let puntaje = 0; // Inicializar el puntaje
 const totalPreguntas = quizData.length;
 
+// Mezclar las preguntas aleatoriamente
+function cambiarOrdendelArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+cambiarOrdendelArray(quizData);
+
 // Función para cargar la pregunta actual
 function loadQuestion() {
 
-    const currentQuestion = quizData[currentQuestionIndex];
+  const currentQuestion = quizData[currentQuestionIndex];
 
-    // Actualizar el texto de la pregunta
-    preguntaElement.textContent = currentQuestion.pregunta;
+  // Actualizar el texto de la pregunta
+  preguntaElement.textContent = currentQuestion.pregunta;
 
-    // Actualizar las opciones de respuesta
-    casillas.forEach((casilla, index) => {
-        casilla.textContent = currentQuestion.respuestas[index];
-        casilla.classList.remove('seleccionada'); // Quitar la clase 'seleccionada' de todas las casillas
-    });
+  // Actualizar las opciones de respuesta
+  casillas.forEach((casilla, index) => {
+    casilla.textContent = currentQuestion.respuestas[index];
+    casilla.classList.remove('seleccionada'); // Quitar la clase 'seleccionada' de todas las casillas
+  });
 
-    // Actualizar el número de pregunta
-    tituloSub.textContent = `Pregunta ${currentQuestionIndex + 1} de ${quizData.length}`;
-    btnRespuesta.textContent = "Responder"; // Inicializar el texto del botón
+  // Actualizar el número de pregunta
+  tituloSub.textContent = `Pregunta ${currentQuestionIndex + 1} de ${quizData.length}`;
+  btnRespuesta.textContent = "Responder"; // Inicializar el texto del botón
 
 
 }
 
 // Función para manejar la selección de una respuesta
 function seleccionarRespuesta(event) {
-    const casillaSeleccionada = event.target;
+  const casillaSeleccionada = event.target;
 
-    // Quitar la clase 'seleccionada' de todas las casillas
-    casillas.forEach(casilla => casilla.classList.remove('seleccionada'));
+  // Quitar la clase 'seleccionada' de todas las casillas
+  casillas.forEach(casilla => casilla.classList.remove('seleccionada'));
 
-    // Agregar la clase 'seleccionada' a la casilla seleccionada
-    casillaSeleccionada.classList.add('seleccionada');
+  // Agregar la clase 'seleccionada' a la casilla seleccionada
+  casillaSeleccionada.classList.add('seleccionada');
 }
 
 // Función para verificar la respuesta y avanzar a la siguiente pregunta
 function checkAnswer() {
-    const respuestaSeleccionada = document.querySelector('.seleccionada');
-  
-    // Quitar el borde blanco a todas las casillas
-    casillas.forEach(casilla => casilla.classList.remove('seleccionada'));
-  
-    // Agregar la clase de animación correspondiente
-    if (respuestaSeleccionada) {
-      const indiceRespuestaSeleccionada = Array.from(casillas).indexOf(respuestaSeleccionada);
-      const respuestaCorrecta = quizData[currentQuestionIndex].respuestaCorrecta;
-  
-      if (indiceRespuestaSeleccionada === respuestaCorrecta) {
-        respuestaSeleccionada.classList.add('animate__animated', 'animate__bounceIn', 'correcta');
-      } else {
-        respuestaSeleccionada.classList.add('animate__animated', 'animate__shakeX', 'incorrecta');
-      }
-  
-      if (indiceRespuestaSeleccionada === respuestaCorrecta) {
-        puntaje++;
-      }
-  
-      progressBar(totalPreguntas);
-  
-      // Avanzar a la siguiente pregunta o mostrar el resultado final
-      setTimeout(() => {
-        currentQuestionIndex++;
-  
-        // Quitar las clases de animación y borde
-        casillas.forEach(casilla => {
-          casilla.classList.remove('animate__animated', 'animate__bounceIn', 'animate__shakeX', 'correcta', 'incorrecta');
-        });
-  
-        if (currentQuestionIndex >= quizData.length) {
-          // Mostrar los resultados
-          showResult();
-        } else {
-          // Cargar la siguiente pregunta
-          loadQuestion();
-        }
-      }, 2000);
+  const respuestaSeleccionada = document.querySelector('.seleccionada');
+
+  // Quitar el borde blanco a todas las casillas
+  casillas.forEach(casilla => casilla.classList.remove('seleccionada'));
+
+  // Agregar la clase de animación correspondiente
+  if (respuestaSeleccionada) {
+    const indiceRespuestaSeleccionada = Array.from(casillas).indexOf(respuestaSeleccionada);
+    const respuestaCorrecta = quizData[currentQuestionIndex].respuestaCorrecta;
+
+    if (indiceRespuestaSeleccionada === respuestaCorrecta) {
+      respuestaSeleccionada.classList.add('animate__animated', 'animate__bounceIn', 'correcta');
     } else {
-      // Si no se ha seleccionado ninguna respuesta
-      if (btnRespuesta.textContent === "Responder") {
-        alert('Por favor, selecciona una respuesta');
+      respuestaSeleccionada.classList.add('animate__animated', 'animate__shakeX', 'incorrecta');
+    }
+
+    if (indiceRespuestaSeleccionada === respuestaCorrecta) {
+      puntaje++;
+    }
+
+    progressBar(totalPreguntas);
+
+    // Avanzar a la siguiente pregunta o mostrar el resultado final
+    setTimeout(() => {
+      currentQuestionIndex++;
+
+      // Quitar las clases de animación y borde
+      casillas.forEach(casilla => {
+        casilla.classList.remove('animate__animated', 'animate__bounceIn', 'animate__shakeX', 'correcta', 'incorrecta');
+      });
+
+      if (currentQuestionIndex >= quizData.length) {
+        // Mostrar los resultados
+        showResult();
+      } else {
+        // Cargar la siguiente pregunta
+        loadQuestion();
       }
+    }, 2000);
+  } else {
+    // Si no se ha seleccionado ninguna respuesta
+    if (btnRespuesta.textContent === "Responder") {
+      alert('Por favor, selecciona una respuesta');
     }
   }
+}
 
 
 //funcion para crear la barra de progreso
 function progressBar(totalPreguntas) {
-    let bar = document.getElementById('barra');
-    let incrementoPorPregunta = 100 / totalPreguntas; // Calcula el incremento por pregunta
-    let currentWidth = parseInt(bar.style.width.replace('%', '')) || 0;
-  
-    currentWidth += incrementoPorPregunta;
-  
-    if (currentWidth >= 100) {
-      currentWidth = 100;
-      bar.classList.add('barra-final');
-    }
-  
-    bar.style.width = currentWidth + '%';
+  let bar = document.getElementById('barra');
+  let incrementoPorPregunta = 100 / totalPreguntas; // Calcula el incremento por pregunta
+  let currentWidth = parseInt(bar.style.width.replace('%', '')) || 0;
+
+  currentWidth += incrementoPorPregunta;
+
+  if (currentWidth >= 100) {
+    currentWidth = 100;
+    bar.classList.add('barra-final');
   }
+
+  bar.style.width = currentWidth + '%';
+}
 
 // Función para mostrar el resultado final
 function showResult() {
-    resultado.innerHTML = `
+  resultado.innerHTML = `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -237,7 +247,7 @@ function showResult() {
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/Frontend_Quiz_app/css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
   </head>
   <body>
     <section class="container row center">
@@ -279,7 +289,7 @@ function showResult() {
 
 // Agregar eventos a las casillas y al botón
 casillas.forEach(casilla => {
-    casilla.addEventListener('click', seleccionarRespuesta);
+  casilla.addEventListener('click', seleccionarRespuesta);
 });
 btnRespuesta.addEventListener('click', checkAnswer);
 
@@ -287,8 +297,8 @@ btnRespuesta.addEventListener('click', checkAnswer);
 loadQuestion();
 
 function volverAlInicio() {
-    window.location.href = "/index.html";
-  }
+  window.location.href = "/index.html";
+}
 
 const style = document.createElement('style');
 style.innerHTML = `
@@ -297,4 +307,3 @@ style.innerHTML = `
 .incorrecta { border: 2px solid red; }`;
 
 document.head.appendChild(style);
-
