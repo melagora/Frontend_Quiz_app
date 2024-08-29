@@ -287,7 +287,7 @@ btnRespuesta.addEventListener('click', checkAnswer);
 loadQuestion();
 
 function volverAlInicio() {
-    window.location.href = "/Frontend_Quiz_app/index.html";
+    window.location.href = "/index.html";
   }
 
 const style = document.createElement('style');
